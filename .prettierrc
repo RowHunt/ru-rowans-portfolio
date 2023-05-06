@@ -5,5 +5,24 @@
 	"printWidth": 100,
 	"plugins": ["prettier-plugin-svelte"],
 	"pluginSearchDirs": ["."],
-	"overrides": [{ "files": "*.svelte", "options": { "parser": "svelte" } }]
+	"overrides": [{ "files": "*.svelte", "options": { "parser": "svelte" } }],
+	"importOrder": [
+		"<THIRD_PARTY_MODULES>", // all third party imports
+		"^models", // all files starting with "models"
+		"^constants", // all files starting with "constants"
+		"^helpers", // all files starting with "helpers"
+		"^services", // all files starting with "services"
+		"^redux", // all files starting with "redux"
+		"^components[/]common", // all files starting with "components/common/"
+		"^components[/]features", // all files starting with "components/features"
+		"^[^.@]+[/]", // doesn"t start with . or @ and is followed by / ex: "routes/app.routes"
+		"^.[/]constants", // ex: "./constants"
+		"^.[/]", // file starts with "./"
+		"^[.][.]$", // ".." files ex: "import { Date } from "..";"
+		"^[.][.][/]", // file starts with "../"
+		"^[.][.][/][.][.][/]", // file starts with "../../"
+		"^.[/]*.*.scss$", // file ends with ".scss"
+		"^@test" // all files starting with "^@test"
+	],
+	"importOrderSortSpecifiers": true
 }

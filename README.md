@@ -2,7 +2,24 @@
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
+In this SvelteKit:
+ - Vite (module bundler) 
+ - ESLint for code linting
+ - Prettier for code formatting
+ - Playwright for browser testing
+ - Vitest for unit testing
+ - Typescript for type checking
+
 ## Creating a project
+
+Node deets:
+- Node.js v18.16.0 to /usr/local/bin/node
+- npm v9.5.1 to /usr/local/bin/npm
+
+Make sure that /usr/local/bin is in your $PATH.
+```bash
+nvm install 18.16.0
+```
 
 If you're seeing this, you've probably already done this step. Congrats!
 
